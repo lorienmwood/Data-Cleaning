@@ -1,36 +1,52 @@
-Air Pollution Data Cleaning and Analysis (UK, 2019–2024)
-This project focuses on data cleaning and exploratory data analysis (EDA) of UK air pollution datasets retrieved from the OpenAQ API. The goal is to transform raw environmental data into clean, structured datasets ready for analysis, using advanced preprocessing techniques and insightful visualizations.
+# Air Pollution Data Cleaning and Analysis (UK, 2019–2024)
 
-Key Features
-Data Sourcing
-Retrieved 90,000 records from the OpenAQ API using authenticated requests.
+A data cleaning and exploratory data analysis (EDA) project on UK air pollution data sourced from the OpenAQ API. The project focuses on transforming raw environmental data into structured, analyzable formats and visualizing key patterns across time, location, and pollutant type.
 
-Collected data on six key pollutants: PM2.5, PM10, NO2, CO, SO2, O3.
+## 📊 Project Overview  
+- **Data Source:** OpenAQ API (2019–2024)  
+- **Records Collected:** 90,000+  
+- **Pollutants Tracked:** PM2.5, PM10, NO2, CO, SO2, O3  
 
-Saved raw and cleaned datasets in JSON format for reproducibility.
+---
 
-Data Cleaning & Preparation
-Removed duplicates and handled missing or null values.
+## ⚙️ Features  
 
-Extracted and standardized city names using regex and string operations.
+### 🗂️ Data Sourcing  
+- API requests made using `requests` with authenticated headers.  
+- Custom query parameters for date range, pollutants, and location (UK).  
+- Data saved in JSON format for reproducibility.  
 
-Parsed timestamps into separate date and hour fields using datetime parsing.
+### 🧹 Data Cleaning & Preparation  
+- Removal of duplicates and handling of missing values.  
+- Standardized city names using regex and string manipulation.  
+- Parsed date and time into separate `date` and `hour` fields.  
+- Cleaned dataset saved in JSON for downstream tasks.  
 
-Reordered columns for consistency and readability.
+### 🛠️ Feature Engineering  
+- Pollution level categorization (Low, Moderate, High) based on pollutant-specific thresholds.  
+- Time of day classification (Morning, Afternoon, Evening, Night).  
+- Geographic region mapping based on latitude and longitude coordinates within the UK.  
 
-Feature Engineering
-Categorized pollution levels based on pollutant thresholds.
+### 📈 Visualization & Insights  
+- Visualized pollution levels by category, region, and time using Matplotlib.  
+- Stacked bar charts to show pollution indicators across regions.  
+- Scatter and line plots to reveal trends in pollution data.  
 
-Classified records by time of day (morning, afternoon, evening, night).
+---
 
-Mapped geographic coordinates into UK regions (e.g., SE, SW, WM, NW, etc.).
+## Usage  
 
-Visualization & Insights
-Generated visual summaries using Matplotlib to identify patterns in pollution levels, regional differences, and time-based trends.
+1. Run the Python scripts to fetch, clean, and process the data.  
+2. Visualize the output using provided plotting functions.  
 
-Highlighted average pollutant levels per region and pollution category distributions.
+---
 
-Let me know if you want this in Markdown format or want me to include example plots and dataset summaries!
+## Technologies Used  
+
+- Python  
+- Requests  
+- Pandas  
+- Matplotlib  
 
 
 
